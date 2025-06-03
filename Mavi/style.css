@@ -158,3 +158,83 @@ p strong+span { /* Emoji de Nerd */
         font-size: 1em; /* Ajuste para Kalam */
     }
 }
+
+.modal-overlay {
+    position: fixed; /* Fica fixo na tela, mesmo com rolagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Fundo escuro semi-transparente */
+    display: flex; /* Para centralizar o conteúdo do modal */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que o modal fique por cima de todo o resto */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    font-family: 'Kalam', cursive; /* Mantém a fonte do site */
+}
+
+.modal-content {
+    background-color: #fff3f8; /* Um tom de rosa bem claro, como o fundo do body mas um pouco diferente */
+    padding: 30px 35px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 420px; /* Largura máxima do modal */
+    width: 90%; /* Ocupa 90% da largura em telas pequenas */
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+    color: #e91e63; /* Cor do título, igual ao H1 */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.9em; /* Tamanho do título do modal */
+}
+
+.modal-content p {
+    color: #444; /* Cor do texto do parágrafo do modal */
+    margin-bottom: 25px;
+    font-size: 1.15em; /* Tamanho do texto do parágrafo */
+    line-height: 1.5;
+    font-weight: 400; /* Peso normal da fonte Kalam */
+}
+
+.modal-buttons button {
+    background-color: #e91e63; /* Cor rosa principal para o botão "Sim" */
+    color: white;
+    border: none;
+    padding: 12px 28px; /* Mais padding para um botão mais "clicável" */
+    font-size: 1.05em;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    margin: 5px 10px;
+    font-family: 'Kalam', cursive; /* Mantém a fonte */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-weight: 700; /* Peso "bold" da Kalam */
+}
+
+.modal-buttons button:hover {
+    background-color: #d81b60; /* Rosa um pouco mais escuro no hover */
+    transform: translateY(-2px); /* Leve efeito de levantar */
+}
+
+.modal-buttons button#noMusicBtn {
+    background-color: #b0b0b0; /* Cinza para o botão "Não" */
+    color: #333;
+}
+
+.modal-buttons button#noMusicBtn:hover {
+    background-color: #a0a0a0; /* Cinza mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/* Classe para esconder o modal (será adicionada/removida via JavaScript) */
+.hidden {
+    opacity: 0;
+    pointer-events: none; /* Impede interações quando escondido */
+    /* Faz o modal "sumir" em vez de apenas ficar transparente e invisível */
+    transform: scale(0.9);
+}
