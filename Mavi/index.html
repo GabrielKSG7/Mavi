@@ -45,7 +45,18 @@
         </footer>
     </div>
 
-    <audio id="musicaFundo" src="assets/videoplayback.mp3" autoplay loop></audio>
+<audio id="musicaFundo" src="musica/sei_nando_reis.mp3" loop></audio>
+
+    <div id="musicPermissionModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Música de Fundo</h2>
+            <p>Gostaria de habilitar a música de fundo para uma experiência mais completa?</p>
+            <div class="modal-buttons">
+                <button id="playMusicBtn" aria-label="Sim, tocar música">Sim, tocar</button>
+                <button id="noMusicBtn" aria-label="Não, obrigado">Não, obrigado</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
