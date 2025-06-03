@@ -1,0 +1,160 @@
+/* Importa a fonte Kalam do Google Fonts (Regular 400 e Bold 700) */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+/* Você também pode adicionar 'Dancing Script' para os títulos, por exemplo:
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kalam:wght@400;700&display=swap'); */
+
+body {
+    font-family: 'Kalam', cursive; /* Nova fonte! 'cursive' é um fallback genérico. */
+    background-color: #fce4ec;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.7; /* Aumentei um pouco o espaçamento entre linhas para melhor leitura com a nova fonte */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    /* Se quiser uma fonte diferente para o título, como Dancing Script:
+    font-family: 'Dancing Script', cursive; */
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3em; /* Ajustei o tamanho, fontes manuscritas podem precisar de ajustes */
+    font-weight: 700; /* Usa a versão bold da Kalam, se importada */
+}
+
+.mensagem-bloco {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.mensagem-bloco:last-child {
+    border-bottom: none;
+}
+
+.mensagem-bloco p {
+    font-size: 1.2em; /* Ajustei o tamanho para melhor legibilidade com Kalam */
+    margin-bottom: 20px;
+    font-weight: 400; /* Usa a versão regular da Kalam */
+}
+
+/* Para o EU TE AMO!!! em negrito, ele usará o font-weight: 700 da Kalam */
+.mensagem-bloco p strong {
+    font-weight: 700; /* Garante que o negrito use a variação mais espessa da fonte */
+}
+
+.galeria-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.galeria-fotos img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria-fotos img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic; /* O itálico pode não ser muito diferente em fontes manuscritas, mas mantemos */
+    color: #777;
+    font-size: 1.1em; /* Ajuste de tamanho para o rodapé */
+}
+
+p strong+span { /* Emoji de Nerd */
+    font-size: 1.5em; /* Mantém o emoji destacado */
+    font-family: sans-serif; /* Garante que o emoji seja renderizado corretamente, pois a fonte manuscrita pode não ter um bom suporte */
+}
+
+/* --- Estilos para Dispositivos Móveis --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em; /* Ajuste para Kalam */
+    }
+
+    .mensagem-bloco p {
+        font-size: 1.15em; /* Ajuste para Kalam */
+    }
+
+    .galeria-fotos img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        line-height: 1.6; /* Ajuste para telas menores */
+    }
+
+    .container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2em; /* Ajuste para Kalam */
+        margin-bottom: 20px;
+    }
+
+    .mensagem-bloco {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+
+    .mensagem-bloco p {
+        font-size: 1.1em; /* Ajuste para Kalam */
+    }
+
+    .galeria-fotos {
+        gap: 10px;
+    }
+
+    .galeria-fotos img {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer {
+        margin-top: 30px;
+        font-size: 1em; /* Ajuste para Kalam */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.8em; /* Ajuste para Kalam */
+    }
+    .galeria-fotos img {
+        width: 120px;
+        height: 120px;
+    }
+    .mensagem-bloco p {
+        font-size: 1em; /* Ajuste para Kalam */
+    }
+}
